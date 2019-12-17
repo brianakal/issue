@@ -59,14 +59,11 @@ router.post('/emailForm', async (req, res) => {
     console.info(info)
   });
 
-
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
   res.json(
     nodemailer.getTestMessageUrl(info)
   )
-
-
 })
 
 

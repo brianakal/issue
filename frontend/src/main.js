@@ -5,7 +5,11 @@ import store from './store'
 
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:2001/';
+// tanpa menggunakan env
+// axios.defaults.baseURL = 'http://localhost:2001/';
+
+//menggunakan env
+axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
 
 Vue.config.productionTip = false
 

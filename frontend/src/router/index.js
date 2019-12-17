@@ -67,12 +67,44 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/PdfPreview.vue')
   },
   {
+    path: '/pdfShow',
+    name: 'PDF Show',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/PdfShow.vue')
+  },
+  {
     path: '/pdfDownload',
     name: 'PDF Download',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/PdfDownload.vue')
+  },
+  {
+    path: '/pdfExport',
+    name: 'PDF Export',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/PdfExport.vue')
+  },
+  {
+    path: '/pdfOnlyOffice',
+    name: 'PDF Only Office',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/PdfOnlyOffice.vue')
+  },
+  {
+    path: '/csvImport',
+    name: 'Export File CSV',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/CsvImport.vue')
   }
 ]
 
