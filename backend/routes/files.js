@@ -15,12 +15,17 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/upload', function (req, res) {
-  req.files.file.map(file => {
-    file.mv('uploads/' + file.name, (err) => {
+  console.log(req.files.file);
+  req.files.file.mv('uploads/' + req.files.file.name, (err) => {
       if (err)
         return res.status(500).send(err);
-    })
   })
+  // req.files.file.map(file => {
+    // file.mv('uploads/' + file.name, (err) => {
+    //   if (err)
+    //     return res.status(500).send(err);
+    // })
+  // })
 
   res.json({
     message: 'File has been uploaded!',
